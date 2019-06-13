@@ -20,6 +20,10 @@ public class PerroSalvaje extends Personaje{
 		super();
 	}
 
+	/**
+	 * Crea una instancia de perro salvaje
+	 * @param level el nivel con el que queres que se cree el perro
+	 */
 	public PerroSalvaje(int level)
 	{
 		super(vidaMax,defensa,recistencia,dañoF,dañoM,velocidad,level,clase,experienciaBase);

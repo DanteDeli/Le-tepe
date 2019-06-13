@@ -87,15 +87,9 @@ public class InteraccionUsuario {
 		return scr.nextInt();
 	}
 	//Metodos varios
-	public static void clearScreen() 
-	{
-		System.out.print("\033[H\033[2J");
-		System.out.flush();
-	}
 	
 	public static void OpcionInvalida()
 	{
-		clearScreen();
 		System.out.println("Opcion invalida");
 	}
 	//Metodos usados en combates
@@ -105,12 +99,10 @@ public class InteraccionUsuario {
 	}
 	public static void LograsEscapar()
 	{
-		clearScreen();
 		System.out.println("Logas escapar");
 	}
 	public static void NoPuedesEscapar()
 	{
-		clearScreen();
 		System.out.println("No puedes escapar!");
 	}
 	public static int Encounter(String clase)
@@ -119,13 +111,11 @@ public class InteraccionUsuario {
 		System.out.println("Te encontrás con un "+clase+"....");
 		System.out.println("1.Te plantas"+"/n"+ "2.Rajás?");
 		numero = ElegirOpcion();
-		clearScreen();
 		return numero;
 	}
 	public static void SosVictorioso()
 	{
 		System.out.println("Saliste victorioso.");
-		clearScreen();
 	}
 	
 	//Opciones del camino
@@ -135,17 +125,14 @@ public class InteraccionUsuario {
 		System.out.println("1.Caminar norte");
 		System.out.println("2.Caminar sur");
 		int opcion = ElegirOpcion();
-		clearScreen();
 		return opcion;
 	}
 	public static void AvanzasElCamino()
 	{
-		clearScreen();
 		System.out.println("Avanzas por el camino.");
 	}
 	public static void RetrocedesElCamino()
 	{
-		clearScreen();
 		System.out.println("Retrocedes por el camino.");
 	}
 	public static int FinalCamino(String puebloProximo)
@@ -154,7 +141,6 @@ public class InteraccionUsuario {
 		System.out.println("1.Ir al pueblo proximo: "+puebloProximo);
 		System.out.println("2.Cambiar rumbo");
 		int opcion = ElegirOpcion();
-		clearScreen();
 		return opcion;
 	}
 	public static void InicioJuego()

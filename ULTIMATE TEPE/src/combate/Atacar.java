@@ -2,9 +2,18 @@ package combate;
 
 import entidades.Habilidad;
 
-public class Atacar {
-
-		
+public class Atacar 
+{
+	/**
+	 * 
+	 * @param h
+	 * @param dañoF
+	 * @param dañoM
+	 * @param lvl
+	 * @param def
+	 * @param res
+	 * @return
+	 */
 	public static int CalcularDaño(Habilidad h, int dañoF, int dañoM, int lvl, int def, int res)  
 	{
 		if(h.getTipoDaño().equals("F"))

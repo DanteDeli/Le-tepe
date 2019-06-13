@@ -7,14 +7,18 @@ import entidades.Habilidad;
 import manager.InteraccionUsuario;
 import entidades.Personaje;
 
-public class MetodosCombate {
-	
-	
+public class MetodosCombate 
+{
 	private static int daño;
 	private static Habilidad h;
 	private static Habilidad g;
 	private static Random rand;
 	
+	/**
+	 * Mecanicas del combate
+	 * @param a Nuestro personaje
+	 * @param b Enemigo
+	 */
 	public static void Combate(Personaje a, Personaje b)
 	{
 		daño = 0;
@@ -80,6 +84,11 @@ public class MetodosCombate {
 		}
 	}
 	
+	/**
+	 * 
+	 * @param a
+	 * @param b
+	 */
 	private static void atribuirExp(Personaje a, Personaje b)
 	{
 		a.setExp(CalcularStats.aumentarExp(a,b));
@@ -91,6 +100,12 @@ public class MetodosCombate {
 		return rand.nextInt(2);
 	}
 	
+	/**
+	 * 
+	 * @param a
+	 * @param b
+	 * @param h
+	 */
 	private static void EfectuarAtaque(Personaje a, Personaje b, Habilidad h)
 	{
 		InteraccionUsuario.Ataque(a.getClase(),h); //Muestra por pantalla qué ataque se efectuó (el nombre)
@@ -98,6 +113,12 @@ public class MetodosCombate {
 				b.getResistenciaM());
 		b.QuitarVida(daño);	
 	}
+	
+	/**
+	 * Verifica si seguimos vivos
+	 * @param a Nuestro personaje
+	 * @return true si estas vivo, false si estas muerto
+	 */
 	private static boolean SigueConVida(Personaje a)
 	{
 		if(a.getVidaActual()>0)
@@ -109,6 +130,16 @@ public class MetodosCombate {
 		}		
 	}
 	
+	/**
+	 * 
+	 * @param h
+	 * @param dañoF
+	 * @param dañoM
+	 * @param lvl
+	 * @param def
+	 * @param res
+	 * @return
+	 */
 	public static int CalcularDaño(Habilidad h, int dañoF, int dañoM, int lvl, int def, int res)  
 	{
 		if(h.getTipoDaño().equals("F")) //Si la habilidad usada es daño F(fisico) usa la 
@@ -122,6 +153,12 @@ public class MetodosCombate {
 		}
 	}
 	
+	/**
+	 * 
+	 * @param a
+	 * @param b
+	 * @return
+	 */
 	private static int CalcularPrioridad(Personaje a, Personaje b)
 	{
 		if(a.getVelocidad()>b.getVelocidad())

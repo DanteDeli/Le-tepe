@@ -26,19 +26,17 @@ public class Manager {
 				jugador = new Ladron(1);
 				jugador.setUbicacion(Biblioteca.Mapa_PuebloInicio());
 				flag = true;
-				InteraccionUsuario.clearScreen();
 				Juego(jugador);
 			break;
 			case 2:  //Crear Paladin.
 				jugador = new Paladin(1);
 				jugador.setUbicacion(Biblioteca.Mapa_PuebloInicio());
 				flag = true;
-				InteraccionUsuario.clearScreen();
 				Juego(jugador);
 			break;
 			default:
-				InteraccionUsuario.clearScreen();
 				InteraccionUsuario.OpcionInvalida();
+				flag = true;
 			break;
 			}	
 		}

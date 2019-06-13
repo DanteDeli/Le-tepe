@@ -28,6 +28,7 @@ public class Biblioteca{
 	//Los parametros son 1.Nombre de la habilidad 2.Tipo de daño (F o M) 3.Potencia (para calcular 
 	//daño 4.Costo de maná 5.Nivel en el que el personaje puede usar dicha habilidad
 	//5.Prioridad (velocidad de la habilidad)
+	
 	public static ArrayList<Habilidad> CargarHabilidadesLadron()
 	{
 		ArrayList<Habilidad> h = new ArrayList<Habilidad>();

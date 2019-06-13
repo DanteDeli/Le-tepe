@@ -23,8 +23,8 @@ public class Ladron extends Personaje{
 		super();
 	}
 */
-	/***Crea una instancia de ladron y carga las habilidades correspondientes.
-	 * 
+	/**
+	 * Crea una instancia de ladron y carga las habilidades correspondientes.
 	 * @param level El nivel con el que se quiera crear a dicho personaje.
 	 */
 	public Ladron(int level)
